@@ -103,13 +103,11 @@ namespace NASA_API_Example
 
             // Appelle de la fonction description 
             var description = await Desciption_Obj(senderComboBox.SelectedItem.ToString());
-            MessageBox.Show(description);
             label4.Text = description.ToString();
             label4.Visible = true;
             label4.Text = label4.Text.Replace(',', '\n');
 
             var Info = await GetNeoInfo(senderComboBox.SelectedItem.ToString());
-            MessageBox.Show(Info);
 
             comboBox2.Items.Clear();
             // Ajout des différentes données

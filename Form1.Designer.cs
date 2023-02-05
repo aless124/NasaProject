@@ -147,7 +147,6 @@ namespace NASA_API_Example
 
                 string NEO_ids_split = Neo_ids_not_split[1];
                 NEO_ids_split = NEO_ids_split.Substring(3, 7);
-                MessageBox.Show(NEO_ids_split);
                 //Date = await GetNeoInfo(NEO_ids_split);
 
 
@@ -211,7 +210,6 @@ namespace NASA_API_Example
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                //MessageBox.Show(content);
                 string[] splitted = content.Split("explanation");
                 Description2 = splitted[1];
 
@@ -233,7 +231,6 @@ namespace NASA_API_Example
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                //MessageBox.Show(content);
                 string[] splitted = content.Split("title");
 
                 Title = splitted[1];
