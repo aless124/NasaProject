@@ -74,7 +74,7 @@ namespace NASA_API_Example
             {
                 string content = await response2.Content.ReadAsStringAsync();
                 string patternDate = "\"close_approach_date\":\"(.*?)\",";
-                MatchCollection dateMatch = Regex.Matches(content, patternDate);
+                MatchCollection dateMatch = Regex.Matches(content, patternDate);  // Regex qui permet d'avoir les info des near earth object
                 for (int i = 0; i < dateMatch.Count(); i++)
                 {
                     string date = dateMatch[i].Groups[1].Value;
